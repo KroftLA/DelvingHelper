@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelvingHelper — Руководство и Описание / User Manual</title>
+    <style>
+        :root {
+            --bg-main: #0c0e14;
+            --bg-card: #151922;
+            --bg-card-alt: #1a202c;
+            --border-gold: #c5a059;
+            --border-subtle: #2d3748;
+            --gold-bright: #ffd700;
+            --gold-soft: #dfb76c;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --green: #4ade80;
+            --blue: #38bdf8;
+            --accent: #eab308;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(180deg, #1e2433 0%, #151922 100%);
+            padding: 30px 40px;
+            border-bottom: 2px solid var(--border-gold);
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            color: var(--gold-bright);
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .badge-version {
+            display: inline-block;
+            background: rgba(229, 160, 89, 0.15);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .lang-btn {
+            background: var(--bg-card-alt);
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+            padding: 8px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: var(--border-gold);
+            color: #000;
+            border-color: var(--gold-bright);
+        }
+
+        .content-section {
+            padding: 30px 40px;
+        }
+
+        h2 {
+            color: var(--gold-soft);
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            color: var(--blue);
+            font-size: 1.15rem;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-main);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: var(--bg-card-alt);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .card-title {
+            color: var(--gold-bright);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin: 0 0 15px 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        code {
+            background: #090b10;
+            color: var(--green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 0.95em;
+            border: 1px solid #1f2937;
+        }
+
+        .command-box {
+            background: #090b10;
+            border: 1px solid var(--border-subtle);
+            border-left: 4px solid var(--border-gold);
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 15px 0;
+            font-family: "Consolas", monospace;
+            font-size: 0.95rem;
+        }
+
+        .command-box .cmd {
+            color: var(--gold-bright);
+            font-weight: bold;
+        }
+
+        .command-box .desc {
+            color: var(--text-muted);
+            margin-left: 10px;
+        }
+
+        .tip-box {
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            color: var(--blue);
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        footer {
+            background: #090b10;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="badge-version">LOTRO Plugin • v1.5.16</div>
+        <h1>DelvingHelper</h1>
+        <p class="tagline">Ваш внутриигровой помощник по дельвингам, ротациям миссий и еженедельным наградам в LOTRO</p>
+        
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-ru" onclick="switchLang('ru')">🇷🇺 Русский</button>
+            <button class="lang-btn" id="btn-en" onclick="switchLang('en')">🇬🇧 English</button>
+        </div>
+    </header>
+
+    <!-- РУССКАЯ ВЕРСИЯ -->
+    <div id="content-ru" class="content-section">
+        <h2>🎯 О плагине</h2>
+        <p><strong>DelvingHelper</strong> — это специализированный внутриигровой аддон для <em>The Lord of the Rings Online</em>, созданный для максимально быстрого и комфортного фарма свитков дельвингов (Delving Writs) и закрытия еженедельных миссий.</p>
+        <p>Плагин избавляет от необходимости сверяться со сторонними таблицами в браузере: он прямо в игре показывает только активные сегодня быстрые миссии, текущее злодеяние дня (Malice) и автоматически считает квесты через игровой чат.</p>
+
+        <h2>📊 Автоматические счётчики квестов</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">1. High Tier Delvings (0/10)</div>
+                <p>Считает дельвинги строго <strong>6-го тира и выше</strong>. Не накручивается от обычных миссий 1 тира!</p>
+            </div>
+            <div class="card">
+                <div class="card-title">2. On A Mission (Weekly) (0/15)</div>
+                <p>Еженедельный квест на любые 15 миссий. Автоматически пополняется при завершении любой миссии.</p>
+            </div>
+            <div class="card">
+                <div class="card-title">3. On A Continuing Mission (0/45)</div>
+                <p>Большой еженедельный квест на 45 миссий. Автоматически отслеживается из системных сообщений игры.</p>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-title">Правила еженедельного сброса LOTRO</div>
+            В четверг в 11:00 МСК завершённые квесты сбрасываются в 0, а незаконченный прогресс (например, 28/45) плагин бережно сохраняет на следующую неделю, в точности как игра!
+        </div>
+
+        <h2>🌟 Ключевые возможности</h2>
+        <ul>
+            <li><strong>Ежедневная ротация:</strong> Плагин знает расписание всех 7 дней недели и показывает только те миссии, которые доступны прямо сейчас.</li>
+            <li><strong>Спидран-маршруты (Burglar Route & Standard):</strong> Отображаются самые короткие и быстрые миссии без долгих перебежек и сложных боссов.</li>
+            <li><strong>Фильтры хабов:</strong> Удобные вкладки: Кардолан (Андрат), Сванфлит (Херне), Военная комната Аннак-Хурфу, Гундабад или все вместе.</li>
+            <li><strong>Злодеяния (Delving Malice):</strong> Описание активной опасности дня, рекомендуемые зелья (Wound, Poison, Disease, Fear) и тактика боя.</li>
+            <li><strong>Travel Tray:</strong> Встроенная складная панель для быстроходов и возвратов в хабы миссий.</li>
+            <li><strong>Быстрый поиск и фильтр:</strong> Мгновенный поиск по названию и кнопка <code>Incomplete</code> (показывает только те миссии, что ещё не пройдены сегодня).</li>
+            <li><strong>Релоадер в 1 клик:</strong> Правый клик по значку плагина $\to$ <em>Reload Plugin</em> для обновления на лету без зависаний.</li>
+        </ul>
+
+        <h2>📦 Установка</h2>
+        <ol>
+            <li>Распакуйте скачанный архив <code>DelvingHelper_v1.5.16.zip</code> в папку плагинов игры:
+                <br><code>Документы\The Lord of the Rings Online\Plugins\</code>
+            </li>
+            <li>В игре включите плагин через меню <em>System $\to$ Plugin Manager</em> или командой в чате:
+                <br><code>/plugins load DelvingHelper</code>
+            </li>
+        </ol>
+
+        <h2>💬 Команды в чате</h2>
+        <div class="command-box">
+            <div><span class="cmd">/dh</span> или <span class="cmd">/delving</span> <span class="desc">— открыть / закрыть главное окно</span></div>
+            <div><span class="cmd">/dh reload</span> <span class="desc">— мгновенно перезагрузить плагин</span></div>
+            <div><span class="cmd">/dh count 0 0 0</span> <span class="desc">— сбросить или выставить вручную все 3 счётчика</span></div>
+            <div><span class="cmd">/dh count45 &lt;число&gt;</span> <span class="desc">— вручную задать счётчик 45 миссий</span></div>
+            <div><span class="cmd">/dh count15 &lt;число&gt;</span> <span class="desc">— вручную задать счётчик 15 миссий</span></div>
+            <div><span class="cmd">/dh count &lt;число&gt;</span> <span class="desc">— вручную задать счётчик дельвингов</span></div>
+            <div><span class="cmd">/dh center</span> <span class="desc">— вернуть окно в центр экрана (если потерялось)</span></div>
+        </div>
+    </div>
+
+    <!-- АНГЛИЙСКАЯ ВЕРСИЯ -->
+    <div id="content-en" class="content-section hidden">
+        <h2>🎯 About DelvingHelper</h2>
+        <p><strong>DelvingHelper</strong> is an essential, high-performance in-game companion for <em>The Lord of the Rings Online</em> designed for rapid Delving Writs farming and weekly mission wrapper completions.</p>
+        <p>No need to alt-tab to external wiki spreadsheets: DelvingHelper automatically tracks daily mission schedules, highlights fast speedrun routes, displays current Delving Malice hazards with potion tips, and logs quest progress directly from the game chat.</p>
+
+        <h2>📊 Automated Quest Tracking</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">1. High Tier Delvings (0/10)</div>
+                <p>Strictly tracks Delvings at <strong>Tier 6 or higher</strong>. Never advances falsely on Tier 1 runs!</p>
+            </div>
+            <div class="card">
+                <div class="card-title">2. On A Mission (Weekly) (0/15)</div>
+                <p>Tracks your weekly 15-mission wrapper across any difficulty. Synchronized from game chat.</p>
+            </div>
+            <div class="card">
+                <div class="card-title">3. On A Continuing Mission (0/45)</div>
+                <p>Tracks the 45-mission weekly wrapper quest automatically with independent steppers.</p>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-title">LOTRO Weekly Reset Compliance</div>
+            On Thursday at 03:00 Server Time (EST), completed quests reset to 0, while incomplete progress (e.g. 28/45) is faithfully preserved into the new week.
+        </div>
+
+        <h2>🌟 Core Features</h2>
+        <ul>
+            <li><strong>Automated Daily Rotations:</strong> Detects the active server day and displays only the missions officially available today.</li>
+            <li><strong>Curated Speedrun Routes:</strong> Pre-filtered lists for the shortest, safest, and fastest instances with minimal mob density.</li>
+            <li><strong>Hub Filters:</strong> Instant tabs for Cardolan (Andrath), Swanfleet (Herne), War Room (Annak-khurfu), Gundabad, or All Hubs.</li>
+            <li><strong>Delving Malice Guide:</strong> Real-time breakdown of today's hazard, recommended curative potions (Wound, Poison, Disease, Fear), and combat tactics.</li>
+            <li><strong>Collapsible Travel Tray:</strong> Built-in shortcut tray for return maps and fast-travel skills directly inside the plugin window.</li>
+            <li><strong>Live Search & Incomplete Filter:</strong> Filter cards by keywords or click <code>Incomplete</code> to hide missions you have already completed today.</li>
+            <li><strong>1-Click Instant Reloader:</strong> Right-click the jewel icon $\to$ <em>Reload Plugin</em> to update smoothly without freezing or console commands.</li>
+        </ul>
+
+        <h2>📦 Installation</h2>
+        <ol>
+            <li>Extract the downloaded <code>DelvingHelper_v1.5.16.zip</code> archive into your LOTRO plugins folder:
+                <br><code>Documents\The Lord of the Rings Online\Plugins\</code>
+            </li>
+            <li>In-game, load the plugin via the Plugin Manager or by typing:
+                <br><code>/plugins load DelvingHelper</code>
+            </li>
+        </ol>
+
+        <h2>💬 Chat Commands</h2>
+        <div class="command-box">
+            <div><span class="cmd">/dh</span> or <span class="cmd">/delving</span> <span class="desc">— Toggle main window</span></div>
+            <div><span class="cmd">/dh reload</span> <span class="desc">— Instantly reload the plugin on the fly</span></div>
+            <div><span class="cmd">/dh count 0 0 0</span> <span class="desc">— Set or reset all 3 counters</span></div>
+            <div><span class="cmd">/dh count45 &lt;n&gt;</span> <span class="desc">— Set 45-mission weekly counter</span></div>
+            <div><span class="cmd">/dh count15 &lt;n&gt;</span> <span class="desc">— Set 15-mission weekly counter</span></div>
+            <div><span class="cmd">/dh count &lt;n&gt;</span> <span class="desc">— Set High Tier Delvings counter</span></div>
+            <div><span class="cmd">/dh center</span> <span class="desc">— Re-center windows if moved off-screen</span></div>
+        </div>
+    </div>
+
+    <footer>
+        DelvingHelper v1.5.16 • Developed by Antigravity &amp; Andy for LOTRO players
+    </footer>
+</div>
+
+<script>
+    function switchLang(lang) {
+        const ruContent = document.getElementById('content-ru');
+        const enContent = document.getElementById('content-en');
+        const btnRu = document.getElementById('btn-ru');
+        const btnEn = document.getElementById('btn-en');
+
+        if (lang === 'en') {
+            ruContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            btnRu.classList.remove('active');
+            btnEn.classList.add('active');
+        } else {
+            ruContent.classList.remove('hidden');
+            enContent.classList.add('hidden');
+            btnRu.classList.add('active');
+            btnEn.classList.remove('active');
+        }
+    }
+</script>
+
+</body>
+</html>
