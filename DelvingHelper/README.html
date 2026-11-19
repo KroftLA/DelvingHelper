@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DelvingHelper — Руководство и Описание / User Manual</title>
+    <title>DelvingHelper — Руководство / User Manual</title>
     <style>
         :root {
             --bg-main: #0c0e14;
@@ -17,7 +17,6 @@
             --text-muted: #94a3b8;
             --green: #4ade80;
             --blue: #38bdf8;
-            --accent: #eab308;
         }
 
         * {
@@ -49,7 +48,6 @@
             padding: 30px 40px;
             border-bottom: 2px solid var(--border-gold);
             text-align: center;
-            position: relative;
         }
 
         h1 {
@@ -115,15 +113,6 @@
             margin: 25px 0 15px;
             padding-bottom: 8px;
             border-bottom: 1px solid var(--border-subtle);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h3 {
-            color: var(--blue);
-            font-size: 1.15rem;
-            margin: 18px 0 8px;
         }
 
         p {
@@ -151,12 +140,12 @@
             margin-bottom: 8px;
         }
 
-        ul {
+        ul, ol {
             margin: 0 0 15px 20px;
         }
 
         li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         code {
@@ -167,27 +156,6 @@
             font-family: "Consolas", "Courier New", monospace;
             font-size: 0.95em;
             border: 1px solid #1f2937;
-        }
-
-        .command-box {
-            background: #090b10;
-            border: 1px solid var(--border-subtle);
-            border-left: 4px solid var(--border-gold);
-            border-radius: 6px;
-            padding: 14px 18px;
-            margin: 15px 0;
-            font-family: "Consolas", monospace;
-            font-size: 0.95rem;
-        }
-
-        .command-box .cmd {
-            color: var(--gold-bright);
-            font-weight: bold;
-        }
-
-        .command-box .desc {
-            color: var(--text-muted);
-            margin-left: 10px;
         }
 
         .tip-box {
@@ -236,7 +204,7 @@
     <div id="content-ru" class="content-section">
         <h2>🎯 О плагине</h2>
         <p><strong>DelvingHelper</strong> — это специализированный внутриигровой аддон для <em>The Lord of the Rings Online</em>, созданный для максимально быстрого и комфортного фарма свитков дельвингов (Delving Writs) и закрытия еженедельных миссий.</p>
-        <p>Плагин избавляет от необходимости сверяться со сторонними таблицами в браузере: он прямо в игре показывает только активные сегодня быстрые миссии, текущее злодеяние дня (Malice) и автоматически считает квесты через игровой чат.</p>
+        <p>Плагин прямо в игре показывает только активные сегодня быстрые миссии, текущее злодеяние дня (Malice) и автоматически считает квесты через игровой чат.</p>
 
         <h2>📊 Автоматические счётчики квестов</h2>
         <div class="grid">
@@ -267,7 +235,7 @@
             <li><strong>Злодеяния (Delving Malice):</strong> Описание активной опасности дня, рекомендуемые зелья (Wound, Poison, Disease, Fear) и тактика боя.</li>
             <li><strong>Travel Tray:</strong> Встроенная складная панель для быстроходов и возвратов в хабы миссий.</li>
             <li><strong>Быстрый поиск и фильтр:</strong> Мгновенный поиск по названию и кнопка <code>Incomplete</code> (показывает только те миссии, что ещё не пройдены сегодня).</li>
-            <li><strong>Релоадер в 1 клик:</strong> Правый клик по значку плагина $\to$ <em>Reload Plugin</em> для обновления на лету без зависаний.</li>
+            <li><strong>Релоадер в 1 клик:</strong> Правый клик по значку плагина → <em>Reload Plugin</em> для обновления на лету без зависаний.</li>
         </ul>
 
         <h2>📦 Установка</h2>
@@ -275,28 +243,15 @@
             <li>Распакуйте скачанный архив <code>DelvingHelper_v1.5.16.zip</code> в папку плагинов игры:
                 <br><code>Документы\The Lord of the Rings Online\Plugins\</code>
             </li>
-            <li>В игре включите плагин через меню <em>System $\to$ Plugin Manager</em> или командой в чате:
-                <br><code>/plugins load DelvingHelper</code>
-            </li>
+            <li>В игре включите плагин через стандартное меню <strong>System → Plugin Manager</strong>.</li>
         </ol>
-
-        <h2>💬 Команды в чате</h2>
-        <div class="command-box">
-            <div><span class="cmd">/dh</span> или <span class="cmd">/delving</span> <span class="desc">— открыть / закрыть главное окно</span></div>
-            <div><span class="cmd">/dh reload</span> <span class="desc">— мгновенно перезагрузить плагин</span></div>
-            <div><span class="cmd">/dh count 0 0 0</span> <span class="desc">— сбросить или выставить вручную все 3 счётчика</span></div>
-            <div><span class="cmd">/dh count45 &lt;число&gt;</span> <span class="desc">— вручную задать счётчик 45 миссий</span></div>
-            <div><span class="cmd">/dh count15 &lt;число&gt;</span> <span class="desc">— вручную задать счётчик 15 миссий</span></div>
-            <div><span class="cmd">/dh count &lt;число&gt;</span> <span class="desc">— вручную задать счётчик дельвингов</span></div>
-            <div><span class="cmd">/dh center</span> <span class="desc">— вернуть окно в центр экрана (если потерялось)</span></div>
-        </div>
     </div>
 
     <!-- АНГЛИЙСКАЯ ВЕРСИЯ -->
     <div id="content-en" class="content-section hidden">
         <h2>🎯 About DelvingHelper</h2>
         <p><strong>DelvingHelper</strong> is an essential, high-performance in-game companion for <em>The Lord of the Rings Online</em> designed for rapid Delving Writs farming and weekly mission wrapper completions.</p>
-        <p>No need to alt-tab to external wiki spreadsheets: DelvingHelper automatically tracks daily mission schedules, highlights fast speedrun routes, displays current Delving Malice hazards with potion tips, and logs quest progress directly from the game chat.</p>
+        <p>DelvingHelper automatically tracks daily mission schedules, highlights fast speedrun routes, displays current Delving Malice hazards with potion tips, and logs quest progress directly from the game chat.</p>
 
         <h2>📊 Automated Quest Tracking</h2>
         <div class="grid">
@@ -327,7 +282,7 @@
             <li><strong>Delving Malice Guide:</strong> Real-time breakdown of today's hazard, recommended curative potions (Wound, Poison, Disease, Fear), and combat tactics.</li>
             <li><strong>Collapsible Travel Tray:</strong> Built-in shortcut tray for return maps and fast-travel skills directly inside the plugin window.</li>
             <li><strong>Live Search & Incomplete Filter:</strong> Filter cards by keywords or click <code>Incomplete</code> to hide missions you have already completed today.</li>
-            <li><strong>1-Click Instant Reloader:</strong> Right-click the jewel icon $\to$ <em>Reload Plugin</em> to update smoothly without freezing or console commands.</li>
+            <li><strong>1-Click Instant Reloader:</strong> Right-click the jewel icon → <em>Reload Plugin</em> to update smoothly without freezing.</li>
         </ul>
 
         <h2>📦 Installation</h2>
@@ -335,21 +290,8 @@
             <li>Extract the downloaded <code>DelvingHelper_v1.5.16.zip</code> archive into your LOTRO plugins folder:
                 <br><code>Documents\The Lord of the Rings Online\Plugins\</code>
             </li>
-            <li>In-game, load the plugin via the Plugin Manager or by typing:
-                <br><code>/plugins load DelvingHelper</code>
-            </li>
+            <li>In-game, enable <strong>DelvingHelper</strong> in the standard <strong>System → Plugin Manager</strong> menu.</li>
         </ol>
-
-        <h2>💬 Chat Commands</h2>
-        <div class="command-box">
-            <div><span class="cmd">/dh</span> or <span class="cmd">/delving</span> <span class="desc">— Toggle main window</span></div>
-            <div><span class="cmd">/dh reload</span> <span class="desc">— Instantly reload the plugin on the fly</span></div>
-            <div><span class="cmd">/dh count 0 0 0</span> <span class="desc">— Set or reset all 3 counters</span></div>
-            <div><span class="cmd">/dh count45 &lt;n&gt;</span> <span class="desc">— Set 45-mission weekly counter</span></div>
-            <div><span class="cmd">/dh count15 &lt;n&gt;</span> <span class="desc">— Set 15-mission weekly counter</span></div>
-            <div><span class="cmd">/dh count &lt;n&gt;</span> <span class="desc">— Set High Tier Delvings counter</span></div>
-            <div><span class="cmd">/dh center</span> <span class="desc">— Re-center windows if moved off-screen</span></div>
-        </div>
     </div>
 
     <footer>

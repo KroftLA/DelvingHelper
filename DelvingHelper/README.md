@@ -26,7 +26,7 @@
 * **Delving Malice Guide:** Real-time breakdown of today's hazard, recommended curative potions (Wound, Poison, Disease, Fear), and combat tactics.
 * **Collapsible Travel Tray:** Built-in shortcut tray for return maps and fast-travel skills directly inside the plugin window.
 * **Live Search & Incomplete Filter:** Filter cards by keywords or click `Incomplete` to hide missions you have already completed today.
-* **1-Click Instant Reloader:** Right-click the jewel icon → *Reload Plugin* to update smoothly without freezing or console commands.
+* **1-Click Instant Reloader:** Right-click the jewel icon → *Reload Plugin* to update smoothly without freezing.
 
 ---
 
@@ -37,22 +37,4 @@
    ```text
    Documents\The Lord of the Rings Online\Plugins\
    ```
-3. In-game, load the plugin via chat:
-   ```text
-   /plugins load DelvingHelper
-   ```
-   *(or enable it in the standard System → Plugin Manager menu).*
-
----
-
-## 💬 Chat Commands
-
-* `/dh` or `/delving` — Toggle main window visibility.
-* `/dh reload` — Instantly reload the plugin on the fly.
-* `/dh count <10> <15> <45>` — Manually set all 3 counters (e.g. `/dh count 0 0 0`).
-* `/dh count45 <n>` — Set the 45-mission weekly counter.
-* `/dh count15 <n>` — Set the 15-mission weekly counter.
-* `/dh count <n>` — Set the High Tier Delvings counter.
-* `/dh tz <offset>` — Set client UTC offset (e.g. `/dh tz 3` for UTC+3 / MSK).
-* `/dh center` — Re-center all windows if moved off-screen.
-* `/dh icon` — Ensure the floating jewel icon is visible.
+3. In-game, enable **DelvingHelper** in the **System → Plugin Manager** menu.
