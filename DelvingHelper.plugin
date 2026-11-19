@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Plugin>
+    <Information>
+        <Name>DelvingHelper</Name>
+        <Author>Antigravity &amp; Andy</Author>
+        <Version>1.5.16</Version>
+        <Description>Delving Daily Rotation Tracker: displays today's active Delving missions, speedrun recommendations, NPC coordinates, Delving Malice variant, daily reset timer, Collapsible Fast Travel Tray, and Escape-to-Close support.</Description>
+        <Image>DelvingHelper/icon.tga</Image>
+    </Information>
+    <Package>DelvingHelper.Main</Package>
+    <Configuration Apartment="DelvingHelper" />
+</Plugin>
