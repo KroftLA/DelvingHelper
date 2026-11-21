@@ -4,11 +4,20 @@
 
 ---
 
-## What's New in v1.5.16
+## What's New in v1.5.21
 
+* **Siege-breaking & The Nettinglade on Saturday:**
+  * Added *"Siege-breaking"* (Herne) and *"The Nettinglade"* (Andrath) to Saturday rotation lists and Burglar speedrun recommendations.
+* **Cardolan Dynamic Rotation Documentation:**
+  * Added guidance explaining that Cardolan (Andrath / Herne) missions appear dynamically/chaotically at NPCs, recommending using the search bar to locate them by name.
+* **Updated Plugin Credits & Documentation:**
+  * Official plugin development and documentation attributed to Kroft.
+* **Removed Unfavorable Mission:**
+  * Completely removed *"The Last Embers of Nûrz Ghâshu"* from rotation databases and speedrun recommendations.
+* **Window State on Login:**
+  * Fixed window auto-opening upon login or reload — the main window stays closed until explicitly clicked on the jewel icon.
 * **Decoupled High Tier Delvings from Rotation Checkboxes:**
   * The `High tier delvings (tier 6 and higher)` counter is now strictly and exclusively driven by the in-game quest objective (`Completed high tier delvings (tier 6 and higher) (X/10)`).
-  * Running rotation missions on Tier 1–5 will mark the mission checklist card as completed, but will **never falsely increment** the High Tier Delvings counter!
 * **Real-Time Wrapper Quest Synchronization:**
   * All 3 weekly wrapper quests (`(X/10)`, `(X/15)`, `(X/45)`) synchronize with the game's authoritative quest updates from chat without drift or leftover offsets across weekly resets.
 * **Improved UI Sub-bar Layout:**
@@ -28,11 +37,14 @@
 * **Live Search & Incomplete Filter:** Filter cards by keywords or click `Incomplete` to hide missions you have already completed today.
 * **1-Click Instant Reloader:** Right-click the jewel icon → *Reload Plugin* to update smoothly without freezing.
 
+> [!NOTE]
+> **Cardolan Missions Note:** In Cardolan hubs (Andrath & Herne), daily missions appear dynamically/chaotically at the NPC. Use the search bar in DelvingHelper to quickly find any mission by name.
+
 ---
 
 ## 📦 Installation
 
-1. Download the latest release from the [Releases](https://github.com/KroftLA/DelvingHelper/releases) page (`DelvingHelper_v1.5.16.zip`).
+1. Download the latest release from the [Releases](https://github.com/KroftLA/DelvingHelper/releases) page (`DelvingHelper_v1.5.21.zip`).
 2. Extract the archive into your LOTRO plugins folder:
    ```text
    Documents\The Lord of the Rings Online\Plugins\

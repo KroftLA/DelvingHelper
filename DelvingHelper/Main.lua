@@ -5,9 +5,9 @@ import "Turbine.UI.Lotro";
 import "DelvingHelper.Data";
 
 -- ============================================================================
--- DelvingHelper v1.5.8
+-- DelvingHelper v1.5.21
 -- Dedicated Delving Writs Farm, Mission Pools & Burglar Speedrun Tracker
--- Developed by Antigravity & Andy
+-- Developed by Kroft
 -- Strict 7-bit ASCII text only to avoid '??' glyph rendering issues in LOTRO.
 -- ============================================================================
 
@@ -15,7 +15,7 @@ DelvingHelper = DelvingHelper or {};
 local DH = DelvingHelper;
 local D = DelvingHelper.Data;
 
-local PLUGIN_VERSION = "1.5.16";
+local PLUGIN_VERSION = "1.5.21";
 
 -- ----------------------------------------------------------------------------
 -- Safe Callback Registration
@@ -373,6 +373,8 @@ local function LoadSettings()
     if DH.settings.weekly45Goal == nil then
         DH.settings.weekly45Goal = 45;
     end
+
+    DH.settings.winVisible = false;
 
     DetectPlayer();
 end
@@ -1472,7 +1474,8 @@ local function CreateMainWindow()
     mainWindow:SetSize(DH.settings.winW, DH.settings.winH);
     mainWindow:SetPosition(DH.settings.winX, DH.settings.winY);
     mainWindow:SetText("Delving Helper v" .. PLUGIN_VERSION .. " - Delving Writs Farm");
-    mainWindow:SetVisible(DH.settings.winVisible);
+    mainWindow:SetVisible(false);
+    DH.settings.winVisible = false;
 
     mainWindow.PositionChanged = function(sender, args)
         local x, y = mainWindow:GetPosition();
@@ -3509,6 +3512,7 @@ if plugin ~= nil then
 
     plugin.Unload = function(sender, args)
         pcall(function()
+            DH.settings.winVisible = false;
             SaveSettings();
             if updateTimer then
                 updateTimer:SetWantsUpdates(false);

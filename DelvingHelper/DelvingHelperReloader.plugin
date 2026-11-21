@@ -2,7 +2,7 @@
 <Plugin>
     <Information>
         <Name>DelvingHelperReloader</Name>
-        <Author>Antigravity &amp; Andy</Author>
+        <Author>Kroft</Author>
         <Version>1.0.0</Version>
         <Description>Companion reloader for DelvingHelper</Description>
         <Image>DelvingHelper/icon.tga</Image>
