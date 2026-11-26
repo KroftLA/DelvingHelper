@@ -12,24 +12,6 @@
   * Added *"Crown of Caranost"*, *"Down on the Farm"*, and *"The Ruins of Amon Firn"* (Andrath) to Tuesday rotation lists and Burglar speedrun recommendations.
 * **The Accursed Flame on Sunday:**
   * Added *"The Accursed Flame"* (Herne) to Sunday rotation lists and Burglar speedrun recommendations.
-* **Siege-breaking & The Nettinglade on Saturday:**
-  * Added *"Siege-breaking"* (Herne) and *"The Nettinglade"* (Andrath) to Saturday rotation lists and Burglar speedrun recommendations.
-* **Cardolan Dynamic Rotation Documentation:**
-  * Added guidance explaining that Cardolan (Andrath / Herne) missions appear dynamically/chaotically at NPCs, recommending using the search bar to locate them by name.
-* **Updated Plugin Credits & Documentation:**
-  * Official plugin development and documentation attributed to Kroft.
-* **Removed Unfavorable Mission:**
-  * Completely removed *"The Last Embers of Nûrz Ghâshu"* from rotation databases and speedrun recommendations.
-* **Window State on Login:**
-  * Fixed window auto-opening upon login or reload — the main window stays closed until explicitly clicked on the jewel icon.
-* **Decoupled High Tier Delvings from Rotation Checkboxes:**
-  * The `High tier delvings (tier 6 and higher)` counter is now strictly and exclusively driven by the in-game quest objective (`Completed high tier delvings (tier 6 and higher) (X/10)`).
-* **Real-Time Wrapper Quest Synchronization:**
-  * All 3 weekly wrapper quests (`(X/10)`, `(X/15)`, `(X/45)`) synchronize with the game's authoritative quest updates from chat without drift or leftover offsets across weekly resets.
-* **Improved UI Sub-bar Layout:**
-  * Sub-bar buttons and labels redesigned with generous spacing (378px) preventing text truncation or overlap across all 3 rows.
-* **Offline HTML User Manual (`README.html`):**
-  * Added an interactive HTML user guide inside the plugin folder that opens directly in any web browser with instant Russian / English language switching.
 
 ---
 
