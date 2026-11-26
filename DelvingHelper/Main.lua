@@ -5,7 +5,7 @@ import "Turbine.UI.Lotro";
 import "DelvingHelper.Data";
 
 -- ============================================================================
--- DelvingHelper v1.5.21
+-- DelvingHelper v1.5.24
 -- Dedicated Delving Writs Farm, Mission Pools & Burglar Speedrun Tracker
 -- Developed by Kroft
 -- Strict 7-bit ASCII text only to avoid '??' glyph rendering issues in LOTRO.
@@ -15,7 +15,7 @@ DelvingHelper = DelvingHelper or {};
 local DH = DelvingHelper;
 local D = DelvingHelper.Data;
 
-local PLUGIN_VERSION = "1.5.21";
+local PLUGIN_VERSION = "1.5.24";
 
 -- ----------------------------------------------------------------------------
 -- Safe Callback Registration

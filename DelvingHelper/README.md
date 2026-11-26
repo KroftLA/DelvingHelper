@@ -4,8 +4,14 @@
 
 ---
 
-## What's New in v1.5.21
+## What's New in v1.5.24
 
+* **The Accursed Flame on Tuesday:**
+  * Added *"The Accursed Flame"* (Herne) to Tuesday rotation lists and Burglar speedrun recommendations.
+* **Crown of Caranost, Down on the Farm & The Ruins of Amon Firn on Tuesday:**
+  * Added *"Crown of Caranost"*, *"Down on the Farm"*, and *"The Ruins of Amon Firn"* (Andrath) to Tuesday rotation lists and Burglar speedrun recommendations.
+* **The Accursed Flame on Sunday:**
+  * Added *"The Accursed Flame"* (Herne) to Sunday rotation lists and Burglar speedrun recommendations.
 * **Siege-breaking & The Nettinglade on Saturday:**
   * Added *"Siege-breaking"* (Herne) and *"The Nettinglade"* (Andrath) to Saturday rotation lists and Burglar speedrun recommendations.
 * **Cardolan Dynamic Rotation Documentation:**
@@ -44,7 +50,7 @@
 
 ## 📦 Installation
 
-1. Download the latest release from the [Releases](https://github.com/KroftLA/DelvingHelper/releases) page (`DelvingHelper_v1.5.21.zip`).
+1. Download the latest release from the [Releases](https://github.com/KroftLA/DelvingHelper/releases) page (`DelvingHelper_v1.5.24.zip`).
 2. Extract the archive into your LOTRO plugins folder:
    ```text
    Documents\The Lord of the Rings Online\Plugins\
